@@ -1,10 +1,8 @@
 import http from "node:http"
-
 const port = 3000
 
 const server = http.createServer((req, res) =>{
     const { url, method } = req
-
     if(url == '/' && method == 'GET'){
         return res.end(JSON.stringify({
             status: 200,
